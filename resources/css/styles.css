@@ -364,7 +364,7 @@ section{
     color: #C18E59;
 }
 .social{
-    background: url('../img/SocialBG.jpg') no-repeat center top / cover;
+    background: url('../img/socialBG.jpg') no-repeat center top / cover;
     display: flex;
     flex-direction: column;
 }
