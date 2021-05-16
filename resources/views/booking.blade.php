@@ -65,36 +65,38 @@
                         <div class="bookInfo">
 
                             <div><label for="start">Дата заїзду</label><input type="date" id="start" name="trip-start"
-                                                                              value="2021-05-05"
+                                                                              onchange="changeCheckOutDate()" value="2021-05-05"
                                                                               min="2021-05-05" max="2022-12-31"></div>
                             <div><label for="end">Дата виїзду</label><input type="date" id="end" name="trip-start"
                                                                             value="2021-05-05"
                                                                             min="2021-05-05" max="2022-12-31"></div>
+
                             <div>
-                                <select size="1" id="roomType">
-                                    <option value="1">Вид номеру</option>
-                                    <option value="2">Віп</option>
-                                    <option value="3">Люкс</option>
-                                    <option value="4">Курятник</option>
+                                <label for="start">Номер</label>
+                                <select size="1" id="roomType" onchange="changeImage()">
+                                    <option value="1">Standard Room</option>
+                                    <option value="2">Standard Jac. Room</option>
+                                    <option value="3">Superior Standard</option>
+                                    <option value="4">Family Room</option>
+                                    <option value="5">Suite</option>
+                                    <option value="6">Honey Moon Suite</option>
                                 </select>
                             </div>
                             <div>
-
+                                <label for="start">Гості</label>
                                 <select size="1" id="guests">
-                                    <option value="1">Гості</option>
-                                    <option value="2">Є</option>
-                                    <option value="3">Відсутні</option>
+                                    <option value="1">2</option>
+                                    <option value="2">3</option>
+                                    <option value="3">4</option>
                                 </select>
                             </div>
                             <div>
                                 <input type="text" placeholder="ПІБ замовника" id="nameSurname" name="nameSurname">
                             </div>
-
-
                         </div>
 
                         <div class="roomImage">
-                            <img src="{{asset('../resources/img/imgBG.png')}}" alt="roomImage">
+                            <img src="{{asset('../resources/img/r1.jpg')}}" alt="roomImage"  id="roomChangeableImage">
                         </div>
                     </div>
 
