@@ -19,3 +19,4 @@ Route::get('/', function () {
 
 
 Route::get('/page={page}', 'App\Http\Controllers\MyController@changePage');
+Route::post('/checkForm', 'App\Http\Controllers\MyController@bookRoom');

@@ -341,6 +341,11 @@ section{
 	text-align: center;
 }
 
+.afterBlocks{
+    display: flex;
+    flex-direction: column;
+}
+
 .innerDetH{
 	display: flex;
 	justify-content: center;
@@ -997,7 +1002,7 @@ booking
 	margin-bottom: 25px;
 	height: 45px;
 }
-.bookingContent .bookingMenu .bookInfo div:nth-child(5) {
+.bookingContent .bookingMenu .bookInfo div:last-child {
 	margin-bottom: 0;
 }
 .bookingContent .bookingMenu .bookInfo div label {
@@ -1442,6 +1447,9 @@ booking
 	.stars {
 		width: 87%;
 	}
+    .afterBlocks p{
+        padding-top: 1%;
+    }
 	.buttonBook {
 		width: 200px;
 		height: 50px;

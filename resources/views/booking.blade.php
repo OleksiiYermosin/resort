@@ -60,34 +60,43 @@
                         Онлайн-бронювання
                     </h1>
                 </div>
-                <form action="index.html">
+                <form method="post" action="{{url("/checkForm")}}">
                     <div class="bookingMenu">
                         <div class="bookInfo">
 
                             <div><label for="start">Дата заїзду</label><input type="date" id="start" name="trip-start"
                                                                               onchange="changeCheckOutDate()" value="2021-05-05"
                                                                               min="2021-05-05" max="2022-12-31"></div>
-                            <div><label for="end">Дата виїзду</label><input type="date" id="end" name="trip-start"
+                            <div><label for="end">Дата виїзду</label><input type="date" id="end" name="trip-end"
                                                                             value="2021-05-05"
                                                                             min="2021-05-05" max="2022-12-31"></div>
 
                             <div>
                                 <label for="start">Номер</label>
-                                <select size="1" id="roomType" onchange="changeImage()">
-                                    <option value="1">Standard Room</option>
-                                    <option value="2">Standard Jac. Room</option>
-                                    <option value="3">Superior Standard</option>
-                                    <option value="4">Family Room</option>
-                                    <option value="5">Suite</option>
-                                    <option value="6">Honey Moon Suite</option>
+                                <select size="1" id="roomType" name="room-type" onchange="changeImage()">
+                                    <option value="Standard Room">Standard Room</option>
+                                    <option value="Standard Jac. Room">Standard Jac. Room</option>
+                                    <option value="Superior Standard">Superior Standard</option>
+                                    <option value="Family Room">Family Room</option>
+                                    <option value="Suite">Suite</option>
+                                    <option value="Honey Moon Suite">Honey Moon Suite</option>
                                 </select>
                             </div>
                             <div>
                                 <label for="start">Гості</label>
-                                <select size="1" id="guests">
-                                    <option value="1">2</option>
-                                    <option value="2">3</option>
-                                    <option value="3">4</option>
+                                <select size="1" id="guests" name="guests">
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="start">Вид</label>
+                                <select size="1" id="view" name="features">
+                                    <option value="Land view">Land view</option>
+                                    <option value="Garden view">Garden view</option>
+                                    <option value="Pool view">Pool view</option>
+                                    <option value="Sea view">Sea view</option>
                                 </select>
                             </div>
                             <div>

@@ -32,17 +32,17 @@ function changeCheckOutDate(){
 function changeImage(){
     const comboBox = document.getElementById("roomType");
     const image = document.getElementById("roomChangeableImage");
-    if(comboBox.value === "1"){
+    if(comboBox.value === "Standard Room"){
         image.setAttribute('src',"../resources/img/r1.jpg");
-    }else if(comboBox.value === "2"){
+    }else if(comboBox.value === "Standard Jac. Room"){
         image.setAttribute('src',"../resources/img/r2.jpg");
-    }else if(comboBox.value === "3"){
+    }else if(comboBox.value === "Superior Standard"){
         image.setAttribute('src',"../resources/img/r3.jpg");
-    }else if(comboBox.value === "4"){
+    }else if(comboBox.value === "Family Room"){
         image.setAttribute('src',"../resources/img/r4.jpg");
-    }else if(comboBox.value === "5"){
+    }else if(comboBox.value === "Suite"){
         image.setAttribute('src',"../resources/img/r5.jpg");
-    }else if(comboBox.value === "6"){
+    }else if(comboBox.value === "Honey Moon Suite"){
         image.setAttribute('src',"../resources/img/r6.jpg");
     }
 }
