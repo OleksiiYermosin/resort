@@ -10,7 +10,12 @@ use App\Models\Message;
 
 class MyController extends Controller{
     public function changePage($page){
-        return view($page);
+        if($page!='adminpanel'){
+            return view($page);
+        }else{
+            return view('index');
+        }
+
     }
 
     private function makeOrder($data){

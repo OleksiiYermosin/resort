@@ -20,3 +20,9 @@ Route::get('/', function () {
 Route::get('/page={page}', 'MyController@changePage');
 Route::post('/checkForm', 'MyController@bookRoom');
 Route::post('/sendMessage', 'MyController@sendMessage');
+
+Route::get('/adminpanel', 'AdminController@uploadAdminPage')->middleware('auth');
+Route::post('/markMessage', 'AdminController@markMessages')->middleware('auth');
+
+Auth::routes();
+

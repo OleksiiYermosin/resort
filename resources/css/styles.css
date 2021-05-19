@@ -395,6 +395,7 @@ section{
 	width: 20%;
 	height: 308px;
 }
+
 .innerBlockS{
 	display: flex;
 	flex-direction: column;
@@ -1032,6 +1033,153 @@ booking
 	letter-spacing: 0.105em;
 	color: #593129;
 }
+
+.adminHeader {
+    height: 133px;
+    background: url('../img/BookBG.png') no-repeat center top / cover;
+    /*min-height: 675px;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.admin{
+    display: flex;
+    margin: 0px;
+    padding-bottom: 7.5%
+}
+
+.adminInfo{
+    display: flex;
+    flex-direction: column;
+}
+.adminText{
+    padding-bottom: 2%;
+}
+.adminText h1{
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 52px;
+    text-align: center;
+    letter-spacing: 0.105em;
+    color: #593129;
+    padding-top: 7%;
+
+}
+.adminBlocks{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.adminForm{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.formFieldsA{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.formFieldsA input{
+    /*display: block;*/
+    width: 500px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid #593129;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    font-family: 'Montserrat';
+    font-size: 18px;
+    line-height: 172.4%;
+    letter-spacing: 0.105em;
+    color: #000000;
+    padding-left: 1%;
+}
+
+.formFieldsA input[type="submit"] {
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    /*width: 272px;
+    height: 59px;*/
+    background: rgba(255, 255, 255, 0);
+    border: 0px;
+    align-self: center;
+    font-weight: bold;
+}
+
+.adminBlocks.buttonEnter {
+    align-self: center;
+}
+
+.adminBlocks p{
+    padding-bottom: 3%;
+}
+
+.adminHeader .showMenu{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    left: 0;
+    top: 114px;
+    color: #FFFFFF;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.72) 95.31%, rgba(0, 0, 0, 0) 99.98%, rgba(0, 0, 0, 0) 99.99%);
+    filter: drop-shadow(0px 9px 35px rgba(89, 49, 41, 0.56));
+    padding: 20px 20px 20px 40px;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.buttonLogin{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 0px;
+    text-decoration: none;
+    width: 272px;
+    height: 59px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid #593129;
+    box-sizing: border-box;
+    align-self: center;
+}
+
+.mess{
+    width:100%;
+    height:500px;
+    overflow: auto;
+    margin-bottom: 3%;
+    border: 1px solid #593129;
+}
+.messIn{
+    padding-bottom: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+.messIn p{
+    padding-bottom: 1%;
+}
+.messIn:nth-child(1){
+    padding-top: 2%;
+}
+.messIn p:nth-child(1){
+    color: #593129;
+    font-weight: bold;
+}
+.admName a{
+    color: #000000;
+}
+
 .header .showMenu{
 	display: flex;
 	position: absolute;
@@ -1472,6 +1620,11 @@ booking
 	.formFields input {
 		width: 100%;
 	}
+
+    .formFieldsA input {
+        width: 100%;
+    }
+
 	.formShells{
 		padding-top: 10%;
 	}
