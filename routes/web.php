@@ -17,6 +17,6 @@ Route::get('/', function () {
     return view('index');
 });
 
-
-Route::get('/page={page}', 'App\Http\Controllers\MyController@changePage');
-Route::post('/checkForm', 'App\Http\Controllers\MyController@bookRoom');
+Route::get('/page={page}', 'MyController@changePage');
+Route::post('/checkForm', 'MyController@bookRoom');
+Route::post('/sendMessage', 'MyController@sendMessage');

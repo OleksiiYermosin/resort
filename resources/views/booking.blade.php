@@ -100,6 +100,11 @@
                                 </select>
                             </div>
                             <div>
+                                <label for="start">&nbsp;</label>
+                                <input type="text" placeholder="Номер телефону" name="phone">
+                            </div>
+                            <div>
+                                <label for="start">&nbsp;</label>
                                 <input type="text" placeholder="ПІБ замовника" id="nameSurname" name="nameSurname">
                             </div>
                         </div>

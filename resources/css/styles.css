@@ -974,6 +974,7 @@ booking
 .bookingContent .bookInfo select, .bookingContent .bookInfo input {
 	width: 280px;
 	height: 44px;
+    padding-left: 0.5em;
 }
 .bookingContent .bookingMenu {
 	display: flex;
@@ -999,7 +1000,7 @@ booking
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-	margin-bottom: 25px;
+	margin-bottom: 15px;
 	height: 45px;
 }
 .bookingContent .bookingMenu .bookInfo div:last-child {

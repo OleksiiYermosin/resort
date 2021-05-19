@@ -1,7 +1,7 @@
 @extends('template')
 @section('title')
     DOPKA-resort
-    @endsection
+@endsection
 @section('header')
     <header id = "header" class = "header">
         <div class="nav">
@@ -217,7 +217,7 @@
                     <h3>зв’яжіться з нами</h3>
                 </div>
                 <div class="contactsBlocks">
-                    <form class="contactsForm" action="">
+                    <form class="contactsForm" method="post" action="{{url("/sendMessage")}}">
                         <div class="formFields">
                             <input type="text" placeholder="Введіть ім'я" class="enter" name="name">
                             <input type="email" placeholder="Введіть email" class="enter" name="email">

@@ -1,6 +1,6 @@
 @extends('template')
 @section('title')
-    Бронювання номеру
+    DOPKA-resort
 @endsection
 @section('header')
     <header id="header" class="bookingHeader">
@@ -59,7 +59,7 @@
             <div class="roomsInfo">
                 @if(session()->has('message'))
                     <div class="roomsText">
-                        @if(count(session('message'))==1||count(session('message'))==0)
+                        @if(count(session('message'))<=1)
                             <h1>Форму не прийнято</h1>
                         @else
                             <h1>Форму прийнято</h1>
