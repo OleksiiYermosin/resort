@@ -2,16 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 Route::get('/', function () {
     return view('index');
@@ -20,9 +10,14 @@ Route::get('/', function () {
 Route::get('/page={page}', 'MyController@changePage');
 Route::post('/checkForm', 'MyController@bookRoom');
 Route::post('/sendMessage', 'MyController@sendMessage');
+Route::post('/checkRooms', 'MyController@checkRooms');
+Route::post('/deleteSingleRoom', 'MyController@deleteSingleRoom');
+Route::post('/deleteAllRooms', 'MyController@deleteAllRooms');
+
 
 Route::get('/adminpanel', 'AdminController@uploadAdminPage')->middleware('auth');
 Route::post('/markMessage', 'AdminController@markMessages')->middleware('auth');
+Route::post('/markSingleMessage', 'AdminController@markSingleMessage')->middleware('auth');
 
 Auth::routes();
 

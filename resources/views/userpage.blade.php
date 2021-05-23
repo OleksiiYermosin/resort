@@ -1,6 +1,6 @@
 @extends('template')
 @section('title')
-    Адмін-панель
+    Інформація про бронювання
 @endsection
 @section('header')
     <header id="header" class="adminHeader">
@@ -58,65 +58,51 @@
         <div class="container">
             <div class="adminInfo">
                 <div class="adminText">
-                    <h1>Зворотній зв'язок</h1>
-                    <h3>Повідомлення від користувачів</h3>
+                    <h1>Скасування бронювання</h1>
+                    @if(!isset($status)||$status=="error")
+                        <h3>Перевірте коректність введених даних</h3>
+                    @elseif(empty($rooms[0]))
+                        <h3>За введеними даними не виявлено жодного бронювання</h3>
+                    @else
+                        <h3>Натисніть на хрестик, щоб скасувати бронювання</h3>
+                    @endif
                 </div>
-                <div class="adminBlocks">
-                    <div class="headAdm">
-                        <p class="admName">Ви зайшли під ім'ям: <span
-                                style="color: #593129; font-family: 'Montserrat Alternates'; font-weight: bold"> {{ Auth::user()->name }}</span>
-                            (<a href="{{ route('logout') }}"
-                                onclick="event.preventDefault();  document.getElementById('logout-form').submit();">вийти</a>)
-                        </p>
-                        <a href="#" onclick="location.reload(); return false;"><img src="public/img/refresh.svg" alt="Refresh"
-                                                                                    class="refreshIcon"></a>
-                    </div>
-                    <select id="combo2" class="comboAdm" name="select2" onchange="hideRead()">
-                        <option>Всі повідомлення</option>
-                        <option>Непрочитані</option>
-                    </select>
-                    <div class="mess">
-                        @if(!empty($mails[0]))
-                            @foreach($mails as $mail)
-                                <form class="messForm" method="post" action="{{url("/markSingleMessage")}}">
+                @if($status!="error"&&!empty($rooms[0]))
+                    <div class="adminBlocks">
+                        <div class="mess">
+                            @foreach($rooms as $r)
+                                <form class="messForm" method="post" action="{{url("/deleteSingleRoom")}}">
                                     <div class="messIn">
-                                        <p name="client"><span style="color: black">Від: </span>{{$mail->name}} (<a
-                                                href="mailto:{{$mail->email}}">{{$mail->email}}</a>)</p>
-                                        <p><span style="font-weight: bold">Текст повідомлення: </span>{{$mail->message}}
+                                        <p><span style="color: black">Номер: </span>{{$r->type}} (<span
+                                                style="font-weight: normal">{{$r->features}}</span>)
                                         </p>
-                                        <div style="display: none;" data-value="{{$mail->is_read}}" class="status"></div>
-                                        <input type="hidden" name="name" value="{{$mail->name}}">
-                                        <input type="hidden" name="mail" value="{{$mail->email}}">
-                                        <input type="hidden" name="text" value="{{$mail->message}}">
+                                        <p><span style="font-weight: bold">Дата заїзду: </span>{{$r->check_in_date}};
+                                            <span
+                                                style="font-weight: bold">дата виїзду: </span>{{$r->check_out_date}};
+                                        </p>
+                                        <input type="hidden" name="client_id" value="{{$r->client_id}}">
+                                        <input type="hidden" name="id" value="{{$r->id}}">
                                     </div>
-
                                     <div class="formFieldsO">
-                                        @if($mail->is_read==0)
-                                            <div class="buttonOpen">
-                                                <input type="submit" value="✔" name="send">
-                                            </div>
-                                        @else
-                                            &nbsp;
-                                        @endif
+                                        <div class="buttonOpen">
+                                            <input type="submit" value="✖" name="send">
+                                            <input type="hidden" name="client_id" value="{{$r->client_id}}">
+                                        </div>
                                     </div>
                                 </form>
                             @endforeach
-                        @else
-                            <p><span style="font-weight: bold">Нових повідомлень немає</span></p>
-                        @endif
-                    </div>
-                    <form method="post" action="{{url("/markMessage")}}">
+                        </div>
                         <div class="formFieldsA">
                             <div class="buttonLogin">
-                                <input type="hidden" name="mails" value="{{base64_encode(json_encode($mails))}}">
-                                <input type="submit" value="Прочитано" name="send">
+                                <input type="submit"  value="Скасувати все" name="cancel" onclick="event.preventDefault();  document.getElementById('submit_form').submit();">
                             </div>
                         </div>
+                    </div>
+                    <form id="submit_form" method="post" action="{{url("/deleteAllRooms")}}">
+                        <input type="hidden" name="client_id" value="{{$rooms[0]->client_id}}">
                     </form>
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                        @csrf
-                    </form>
-                </div>
+                @endif
+
             </div>
         </div>
     </section>

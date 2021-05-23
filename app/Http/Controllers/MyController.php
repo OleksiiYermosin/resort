@@ -11,11 +11,51 @@ use App\Models\Message;
 class MyController extends Controller{
     public function changePage($page){
         if($page!='adminpanel'){
-            return view($page);
-        }else{
-            return view('index');
+            if(view()->exists($page)){
+                return view($page);
+            }
         }
+        return view('index');
+    }
 
+    public function deleteAllRooms(){
+        $client = Client::find(request('client_id'));
+        $rooms = $client->rooms;
+        foreach ($rooms as $r){
+            $r->delete();
+        }
+        $client->is_customer = 0;
+        $client->save();
+        return redirect('/page=user');
+    }
+
+    public function deleteSingleRoom(){
+        $id = request('id');
+        $client = request('client_id');
+        $room = Room::find($id);
+        $room->delete();
+        $c = Client::find($client);
+        $r = $c->rooms;
+        if(empty($r[0])){
+            $c->is_customer = 0;
+            $c->save();
+        }
+        return redirect('/page=user');
+    }
+
+    public function checkRooms(){
+        $name = request('name');
+        $phone = request('phone');
+        if(!isset($name)||!isset($phone)){
+            return view('userpage',['status' => 'error']);
+        }
+        $client = Client::where('phone', $phone)->where('name', $name)->get();
+        if(empty($client[0])){
+            return view('userpage',['status' => 'error']);
+        }
+        $client = $client->get(0);
+        $rooms = $client->rooms;
+        return view('userpage', ['status' => 'success', 'rooms' => $rooms]);
     }
 
     private function makeOrder($data){
@@ -75,17 +115,14 @@ class MyController extends Controller{
                     $c->email = $mail;
                     $c->save();
                     $id =$c->id;
+                }else{
+                    $c = $clients->first();
+                    $c->email = $mail;
+                    $c->save();
+                    $id =$c->id;
                 }
-                $c = $clients->first();
-                $c->email = $mail;
-                $c->save();
-                $id =$c->id;
             }else{
                 $c = $clients->first();
-                if(!isset($c->name)){
-                    $c->name = $name;
-                    $c->save();
-                }
                 $id = $c->id;
             }
             $m = new Message();

@@ -8,16 +8,16 @@
             <div class="container">
                 <div class="top">
                     <div class="logo">
-                        <a href="{{url("/page=index")}}"><img src="{{asset('../resources/img/LogoMain.svg')}}" alt="Logo" class="logoImg"></a>
+                        <a href="{{url("/page=index")}}"><img src="{{asset('public/img/LogoMain.svg')}}" alt="Logo" class="logoImg"></a>
                     </div>
                     <div class="infoMenu">
                         <div class="location">
                             <div class="locA">
-                                <img src="{{asset('../resources/img/placeholderTop.svg')}}" alt="phoneF" class="Timg" style="padding-right: 4%">
+                                <img src="{{asset('public/img/placeholderTop.svg')}}" alt="phoneF" class="Timg" style="padding-right: 4%">
                                 <p> Місто Морське, наб. Морська, 12</p>
                             </div>
                             <div class="locP">
-                                <img src="{{asset('../resources/img/phone-callTop.svg')}}" alt="phoneF" class="Timg" style="padding-right: 4%">
+                                <img src="{{asset('public/img/phone-callTop.svg')}}" alt="phoneF" class="Timg" style="padding-right: 4%">
                                 <p><a href="tel:+380657524265">+380 657 524 265</a></p>
                             </div>
                         </div>
@@ -42,7 +42,7 @@
                             </li>
                         </ul>
                         <button class="menuGam">
-                            <img src="{{asset('../resources/img/menuSmall.svg')}}" alt="menuSm" class="menuS">
+                            <img src="{{asset('public/img/menuSmall.svg')}}" alt="menuSm" class="menuS">
                         </button>
                     </div>
                 </div>
@@ -101,20 +101,21 @@
                             </div>
                             <div>
                                 <label for="start">&nbsp;</label>
-                                <input type="text" placeholder="Номер телефону" name="phone">
+                                <input type="tel" pattern="^\+\d{1,2}\d{3}\d{7}$" maxlength="13" placeholder="Номер телефону (+380*********)" name="phone">
                             </div>
                             <div>
                                 <label for="start">&nbsp;</label>
-                                <input type="text" placeholder="ПІБ замовника" id="nameSurname" name="nameSurname">
+                                <input type="text" pattern="\D+\s{1}\D+\s{1}\D+$" maxlength="30" placeholder="ПІБ замовника" id="nameSurname" name="nameSurname">
                             </div>
                         </div>
 
                         <div class="roomImage">
-                            <img src="{{asset('../resources/img/r1.jpg')}}" alt="roomImage"  id="roomChangeableImage">
+                            <img src="{{asset('public/img/r1.jpg')}}" alt="roomImage"  id="roomChangeableImage">
                         </div>
                     </div>
 
                     <input type="submit" value="Оформити бронювання">
+                    <p style="text-align: right;"><a href="{{url('/page=user')}}" style="text-decoration: none; color: #593129; text-align: end">Скасувати бронювання</a></p>
                 </form>
             </div>
         </div>

@@ -248,29 +248,40 @@ section{
 	background: rgba(1, 4, 26, 0.6);
 }
 .orderMain{
-	display: flex;
-	justify-content: center;
-	width: 100%;
-	height: 100%;
-	align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+.orderMain .formShells{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.orderMain .formShells img{
+    width: 75%;
 }
 .buttonBook{
-	background: #C18E59;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border: 2px solid #976947;
-	box-sizing: border-box;
-	border-radius: 10px;
-	width: 400px;
-	height: 35px;
+    background: #E7A63F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    border-radius: 10px;
+    width: 400px;
+    height: 50px;
 }
-.buttonBook p{
-	margin: 0px;
-	font-size: 18px;
-	line-height: 22px;
-	letter-spacing: 0.105em;
-	color: #FFFFFF;
+.buttonBook a{
+    margin: 0px;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 900;
+    letter-spacing: 0.105em;
+    color: #000000;
+    text-decoration: none;
 }
 .hotelText{
 	display: flex;
@@ -370,7 +381,7 @@ section{
 	color: #C18E59;
 }
 .social{
-	background: url('../img/SocialBG.jpg') no-repeat center top / cover;
+	background: url('../img/socialBG.jpg') no-repeat center top / cover;
 	display: flex;
     margin: 0;
 	flex-direction: column;
@@ -958,6 +969,14 @@ INFO
 /*
 booking
  */
+input {
+    font-family: 'Montserrat';
+}
+
+select {
+    font-family: 'Montserrat';
+}
+
 .bookingHeader {
 	height: 70vh;
 	background: url('../img/BookBG.png') no-repeat center top / cover;
@@ -1006,6 +1025,15 @@ booking
 }
 .bookingContent .bookingMenu .bookInfo div:last-child {
 	margin-bottom: 0;
+}
+
+.comboAdm {
+    height: 60px;
+    width: 300px;
+    font-family: 'Montserrat Alternates';
+    margin-bottom: 3%;
+    border-color: #593129;
+    font-size: 18px;
 }
 .bookingContent .bookingMenu .bookInfo div label {
 	font-size: 16px;
@@ -1072,11 +1100,76 @@ booking
     display: flex;
     flex-direction: column;
 }
+
+.formFieldsO{
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    justify-content: center;
+    align-items: flex-end;
+}
+.formFieldsO input{
+    /*display: block;*/
+    width: 500px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid #593129;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    font-family: 'Montserrat';
+    font-size: 18px;
+    line-height: 172.4%;
+    letter-spacing: 0.105em;
+    color: #000000;
+    padding-left: 1%;
+}
+
+.formFieldsO input[type="submit"] {
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    /*width: 272px;
+    height: 59px;*/
+    background: rgba(255, 255, 255, 0);
+    border: 0px;
+    align-self: center;
+    font-weight: bold;
+}
+.buttonOpen{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 0px;
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid #593129;
+    box-sizing: border-box;
+    /*align-self: center;*/
+}
+.headAdm{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2%;
+}
+.refreshIcon{
+    width: 25px;
+    height: 25px;
+}
+
 .adminForm{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
 }
+
 .formFieldsA{
     display: flex;
     flex-direction: column;
@@ -1084,6 +1177,7 @@ booking
     justify-content: center;
     align-items: center;
 }
+
 .formFieldsA input{
     /*display: block;*/
     width: 500px;
@@ -1120,7 +1214,8 @@ booking
 }
 
 .adminBlocks p{
-    padding-bottom: 3%;
+    padding-top: 0.5%;
+    padding-bottom: 2%;
 }
 
 .adminHeader .showMenu{
@@ -1157,25 +1252,43 @@ booking
 .mess{
     width:100%;
     height:500px;
+    border: 1px solid #593129;
     overflow: auto;
     margin-bottom: 3%;
-    border: 1px solid #593129;
 }
-.messIn{
+
+.messForm{
+    display: flex;
     padding-bottom: 2%;
     padding-left: 2%;
     padding-right: 2%;
+    align-items: center;
+    justify-content: space-between;
 }
+
+.messIn{
+    width: 80%;
+}
+
 .messIn p{
     padding-bottom: 1%;
 }
+
+.messIn a{
+    text-decoration: none;
+    color: #593129;
+    font-weight: normal;
+}
+
 .messIn:nth-child(1){
     padding-top: 2%;
 }
+
 .messIn p:nth-child(1){
     color: #593129;
     font-weight: bold;
 }
+
 .admName a{
     color: #000000;
 }
@@ -1488,7 +1601,19 @@ booking
 	}
 	.innerBlockS {
 		width: 85%;
-	}
+    }
+
+    .orderMain .formShells{
+        display: none;
+    }
+    .orderMain .buttonBook a {
+        text-align: center;
+        font-weight: 800;
+    }
+    .orderMain .buttonBook {
+        width: 90%;
+    }
+
 	/*
 	container
 	*/
@@ -1603,6 +1728,17 @@ booking
 		width: 200px;
 		height: 50px;
 	}
+
+    .buttonOpen {
+        width: 30px;
+        height: 30px;
+    }
+
+    .orderMain .buttonBook a {
+        text-align: center;
+        font-weight: 600;
+    }
+
 	.buttonBook p {
 		line-height: 18px;
 		font-size: 12px;
@@ -1660,6 +1796,14 @@ booking
 		width: 100%;
 		height: 155px;
 	}
+
+    .comboAdm {
+        height: 50px;
+        width: 100%;
+        margin-bottom: 7%;
+        margin-top: 3%;
+        font-size: 16px;
+    }
 
 	/*
 	info

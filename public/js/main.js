@@ -33,16 +33,29 @@ function changeImage(){
     const comboBox = document.getElementById("roomType");
     const image = document.getElementById("roomChangeableImage");
     if(comboBox.value === "Standard Room"){
-        image.setAttribute('src',"../resources/img/r1.jpg");
+        image.setAttribute('src',"public/img/r1.jpg");
     }else if(comboBox.value === "Standard Jac. Room"){
-        image.setAttribute('src',"../resources/img/r2.jpg");
+        image.setAttribute('src',"public/img/r2.jpg");
     }else if(comboBox.value === "Superior Standard"){
-        image.setAttribute('src',"../resources/img/r3.jpg");
+        image.setAttribute('src',"public/img/r3.jpg");
     }else if(comboBox.value === "Family Room"){
-        image.setAttribute('src',"../resources/img/r4.jpg");
+        image.setAttribute('src',"public/img/r4.jpg");
     }else if(comboBox.value === "Suite"){
-        image.setAttribute('src',"../resources/img/r5.jpg");
+        image.setAttribute('src',"public/img/r5.jpg");
     }else if(comboBox.value === "Honey Moon Suite"){
-        image.setAttribute('src',"../resources/img/r6.jpg");
+        image.setAttribute('src',"public/img/r6.jpg");
+    }
+}
+
+function hideRead(){
+    const comboBox = document.getElementById("combo2");
+    var parent = document.getElementsByClassName("messIn");
+    for(let i = 0; i < parent.length; i++){
+        var value = parent[i].getElementsByClassName('status')[0].getAttribute('data-value');
+        if(value==1&&comboBox.value==="Всі повідомлення"){
+            parent[i].hidden = false;
+        }else if(value==1&&comboBox.value==="Непрочитані"){
+            parent[i].hidden = true;
+        }
     }
 }

@@ -1,23 +1,26 @@
 @extends('template')
 @section('title')
     Номери та ціни
-    @endsection
+@endsection
 @section('header')
-    <header id = "headerC" class = "headerC">
+    <header id="headerC" class="headerC">
         <div class="nav">
             <div class="container">
                 <div class="top">
                     <div class="logo">
-                        <a href="{{url("/page=index")}}"><img src="{{asset('../resources/img/LogoMain.svg')}}" alt="Logo" class="logoImg"></a>
+                        <a href="{{url("/page=index")}}"><img src="{{asset('public/img/LogoMain.svg')}}" alt="Logo"
+                                                              class="logoImg"></a>
                     </div>
                     <div class="infoMenu">
                         <div class="location">
                             <div class="locA">
-                                <img src="{{asset('../resources/img/placeholderTop.svg')}}" alt="phoneF" class="Timg" style="padding-right: 4%">
+                                <img src="{{asset('public/img/placeholderTop.svg')}}" alt="phoneF" class="Timg"
+                                     style="padding-right: 4%">
                                 <p> Місто Морське, наб. Морська, 12</p>
                             </div>
                             <div class="locP">
-                                <img src="{{asset('../resources/img/phone-callTop.svg')}}" alt="phoneF" class="Timg" style="padding-right: 4%">
+                                <img src="{{asset('public/img/phone-callTop.svg')}}" alt="phoneF" class="Timg"
+                                     style="padding-right: 4%">
                                 <p><a href="tel:+380657524265">+380 657 524 265</a></p>
                             </div>
                         </div>
@@ -42,7 +45,7 @@
                             </li>
                         </ul>
                         <button class="menuGam">
-                            <img src="{{asset('../resources/img/menuSmall.svg')}}" alt="menuSm" class="menuS">
+                            <img src="{{asset('public/img/menuSmall.svg')}}" alt="menuSm" class="menuS">
                         </button>
                     </div>
                 </div>
@@ -56,14 +59,19 @@
             <div class="roomsInfo">
                 <div class="roomsText">
                     <h1>DOPKA-resort - НОМЕРИ ТА ЦІНИ</h1>
-                    <h4>В готелі <span style="color: #593129; font-weight: 600;">DOPKA-resort</span> є 259 комфортабельних номерів, в яких продумано все до дрібниць для вашого ідеального відпочинку. Ми пропонуємо 6 різних типів номерів: “Standart Room”, ”Standart Jac. Room”, ”Superior Standart”, ”Family Room”, ”Suite” та ”Honey Moon Suite”.</h4>
+                    <h4>В готелі <span style="color: #593129; font-weight: 600;">DOPKA-resort</span> є 259
+                        комфортабельних номерів, в яких продумано все до дрібниць для вашого ідеального відпочинку. Ми
+                        пропонуємо 6 різних типів номерів: “Standart Room”, ”Standart Jac. Room”, ”Superior Standart”,
+                        ”Family Room”, ”Suite” та ”Honey Moon Suite”.</h4>
                 </div>
                 <div class="roomsBlocks">
                     <div class="roomsBlock">
                         <div class="innerBlockR">
-                            <div class="innerPictR">
-                                <img src="{{asset('../resources/img/r1.jpg')}}" alt="Room image" class="innerImgR">
-                            </div>
+                            <a href="{{url("/page=standardroom")}}">
+                                <div class="innerPictR">
+                                    <img src="{{asset('public/img/r1.jpg')}}" alt="Room image" class="innerImgR">
+                                </div>
+                            </a>
                             <div class="innerNameR">
                                 <a href="{{url("/page=standardroom")}}">Standard Room</a>
                             </div>
@@ -79,9 +87,11 @@
                     </div>
                     <div class="roomsBlock">
                         <div class="innerBlockR">
-                            <div class="innerPictR">
-                                <img src="{{asset('../resources/img/r2.jpg')}}" alt="Room image" class="innerImgR">
-                            </div>
+                            <a href="{{url("/page=standardjacroom")}}">
+                                <div class="innerPictR">
+                                    <img src="{{asset('public/img/r2.jpg')}}" alt="Room image" class="innerImgR">
+                                </div>
+                            </a>
                             <div class="innerNameR">
                                 <a href="{{url("/page=standardjacroom")}}">Standard Jac. Room</a>
                             </div>
@@ -97,9 +107,11 @@
                     </div>
                     <div class="roomsBlock">
                         <div class="innerBlockR">
-                            <div class="innerPictR">
-                                <img src="{{asset('../resources/img/r3.jpg')}}" alt="Room image" class="innerImgR">
-                            </div>
+                            <a href="{{url("/page=superiorstandardroom")}}">
+                                <div class="innerPictR">
+                                    <img src="{{asset('public/img/r3.jpg')}}" alt="Room image" class="innerImgR">
+                                </div>
+                            </a>
                             <div class="innerNameR">
                                 <a href="{{url("/page=superiorstandardroom")}}">Superior Standard</a>
                             </div>
@@ -115,9 +127,11 @@
                     </div>
                     <div class="roomsBlock">
                         <div class="innerBlockR">
-                            <div class="innerPictR">
-                                <img src="{{asset('../resources/img/r4.jpg')}}" alt="Room image" class="innerImgR">
-                            </div>
+                            <a href="{{url("/page=familyroom")}}">
+                                <div class="innerPictR">
+                                    <img src="{{asset('public/img/r4.jpg')}}" alt="Room image" class="innerImgR">
+                                </div>
+                            </a>
                             <div class="innerNameR">
                                 <a href="{{url("/page=familyroom")}}">Family Room</a>
                             </div>
@@ -133,9 +147,11 @@
                     </div>
                     <div class="roomsBlock">
                         <div class="innerBlockR">
-                            <div class="innerPictR">
-                                <img src="{{asset('../resources/img/r5.jpg')}}" alt="Room image" class="innerImgR">
-                            </div>
+                            <a href="{{url("/page=suite")}}">
+                                <div class="innerPictR">
+                                    <img src="{{asset('public/img/r5.jpg')}}" alt="Room image" class="innerImgR">
+                                </div>
+                            </a>
                             <div class="innerNameR">
                                 <a href="{{url("/page=suite")}}">Suite</a>
                             </div>
@@ -151,9 +167,11 @@
                     </div>
                     <div class="roomsBlock">
                         <div class="innerBlockR">
-                            <div class="innerPictR">
-                                <img src="{{asset('../resources/img/r6.jpg')}}" alt="Room image" class="innerImgR">
-                            </div>
+                            <a href="{{url("/page=honeymoonsuite")}}">
+                                <div class="innerPictR">
+                                    <img src="{{asset('public/img/r6.jpg')}}" alt="Room image" class="innerImgR">
+                                </div>
+                            </a>
                             <div class="innerNameR">
                                 <a href="{{url("/page=honeymoonsuite")}}">Honey Moon Suite</a>
                             </div>
@@ -181,14 +199,25 @@
                     <p>- Камера зберігання</p>
                     <p>- Організація екскурсій з українсько- та англомовними гідами</p>
                     <p>- Мінеральна вода в номері (0,33 / чол.) В день заїзду</p>
-                    <p>Сніданок в ресторані готелю c 7:30 до 11:00 (у вихідні з 9:00 до 12:00) включений у вартість номера готелю.</p>
-                    <p>Безкоштовне проживання в готелі дітей віком до п'яти років в одному номері з батьками без надання додаткового місця.</p>
+                    <p>Сніданок в ресторані готелю c 7:30 до 11:00 (у вихідні з 9:00 до 12:00) включений у вартість
+                        номера готелю.</p>
+                    <p>Безкоштовне проживання в готелі дітей віком до п'яти років в одному номері з батьками без надання
+                        додаткового місця.</p>
                     <p>Дитяче ліжечко (за запитом).</p>
                     <h5>Відділ бронювання готелю:</h5>
                     <a href="tel:+380663655429">+38 (066) 365-54-29,</a>
                     <a href="tel:+380581569418">+38 (058) 156-94-18,</a>
                     <a href="tel:+380601862618">+38 (060) 186-26-18.</a>
-                    <p>Точна ціна номера готелю за добу проживання вказана в гривнях (UAH) з урахуванням всіх податків. Туристичний збір не входить у вартість номера готелю і оплачується додатково. Оплата здійснюється в гривнях. Сніданок входить у вартість номера. Готель приймає до оплати готівку, кредитні картки Visa та Euro / MasterCard, також можлива безготівкова форма оплати. При ранньому заїзді в готель (з 00:00 до 08:00 години) стягується плата в розмірі 100% ціни номера за 1 добу. При ранньому заїзді в готель (з 08:00 до 14:00 годин) стягується плата в розмірі 50% ціни номера за 1 добу. При пізньому виїзді (з 12:00 до 20:00 години) стягується плата в розмірі 50% ціни номера за 1 добу. При пізньому виїзді (після 20:00) стягується плата в розмірі 100% ціни номера за 1 добу. Номери готелю однієї категорії можуть незначно відрізнятися інтер'єром і обладнанням.</p>
+                    <p>Точна ціна номера готелю за добу проживання вказана в гривнях (UAH) з урахуванням всіх податків.
+                        Туристичний збір не входить у вартість номера готелю і оплачується додатково. Оплата
+                        здійснюється в гривнях. Сніданок входить у вартість номера. Готель приймає до оплати готівку,
+                        кредитні картки Visa та Euro / MasterCard, також можлива безготівкова форма оплати. При ранньому
+                        заїзді в готель (з 00:00 до 08:00 години) стягується плата в розмірі 100% ціни номера за 1 добу.
+                        При ранньому заїзді в готель (з 08:00 до 14:00 годин) стягується плата в розмірі 50% ціни номера
+                        за 1 добу. При пізньому виїзді (з 12:00 до 20:00 години) стягується плата в розмірі 50% ціни
+                        номера за 1 добу. При пізньому виїзді (після 20:00) стягується плата в розмірі 100% ціни номера
+                        за 1 добу. Номери готелю однієї категорії можуть незначно відрізнятися інтер'єром і
+                        обладнанням.</p>
                 </div>
             </div>
         </div>

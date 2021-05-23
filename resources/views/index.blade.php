@@ -8,16 +8,16 @@
             <div class="container">
                 <div class="top">
                     <div class="logo">
-                        <a href="{{url("/page=index")}}"><img src="{{asset('../resources/img/LogoMain.svg')}}" alt="Logo" class="logoImg"></a>
+                        <a href="{{url("/page=index")}}"><img src="{{asset('public/img/LogoMain.svg')}}" alt="Logo" class="logoImg"></a>
                     </div>
                     <div class="infoMenu">
                         <div class="location">
                             <div class="locA">
-                                <img src="{{asset('../resources/img/placeholderTop.svg')}}" alt="phoneF" class="Timg" style="padding-right: 4%">
+                                <img src="{{asset('public/img/placeholderTop.svg')}}" alt="phoneF" class="Timg" style="padding-right: 4%">
                                 <p> Місто Морське, наб. Морська, 12</p>
                             </div>
                             <div class="locP">
-                                <img src="{{asset('../resources/img/phone-callTop.svg')}}" alt="phoneF" class="Timg" style="padding-right: 4%">
+                                <img src="{{asset('public/img/phone-callTop.svg')}}" alt="phoneF" class="Timg" style="padding-right: 4%">
                                 <p><a href="tel:+380657524265">+380 657 524 265</a></p>
                             </div>
                         </div>
@@ -42,7 +42,7 @@
                             </li>
                         </ul>
                         <button class="menuGam">
-                            <img src="{{asset('../resources/img/menuSmall.svg')}}" alt="menuSm" class="menuS">
+                            <img src="{{asset('public/img/menuSmall.svg')}}" alt="menuSm" class="menuS">
                         </button>
                     </div>
                 </div>
@@ -53,11 +53,11 @@
                 <div class="info">
                     <div class="infoBG">
                         <div class="stars">
-                            <img src="{{asset('../resources/img/Star.png')}}" alt="star" class="starImg">
-                            <img src="{{asset('../resources/img/Star.png')}}" alt="star" class="starImg">
-                            <img src="{{asset('../resources/img/Star.png')}}" alt="star" class="starImg">
-                            <img src="{{asset('../resources/img/Star.png')}}" alt="star" class="starImg">
-                            <img src="{{asset('../resources/img/Star.png')}}" alt="star" class="starImg">
+                            <img src="{{asset('public/img/Star.png')}}" alt="star" class="starImg">
+                            <img src="{{asset('public/img/Star.png')}}" alt="star" class="starImg">
+                            <img src="{{asset('public/img/Star.png')}}" alt="star" class="starImg">
+                            <img src="{{asset('public/img/Star.png')}}" alt="star" class="starImg">
+                            <img src="{{asset('public/img/Star.png')}}" alt="star" class="starImg">
                         </div>
                         <div class="infoTxt">
                             <p>
@@ -71,10 +71,16 @@
         <div class="bookingMain">
             <div class="container">
                 <div class="orderMain">
+                    <div class="formShells">
+                        <img src="{{asset('public/img/shells.png')}}" alt="Shells" class="shells">
+                    </div>
                     <div class="buttonBook">
-                        <p>
+                        <a href="{{url('/page=booking')}}">
                             Перевірити наявність місць
-                        </p>
+                        </a>
+                    </div>
+                    <div class="formShells">
+                        <img src="{{asset('public/img/shells.png')}}" alt="Shells" class="shells">
                     </div>
                 </div>
             </div>
@@ -100,7 +106,7 @@
                     <div class="hotelBlock">
                         <div class="innerBlockH">
                             <div class="innerPictH">
-                                <img src="{{asset('../resources/img/imgAb1.jpg')}}" alt="About image" class="innerImgH">
+                                <img src="{{asset('public/img/imgAb1.jpg')}}" alt="About image" class="innerImgH">
                             </div>
                             <div class="innerTextH">
                                 <p><span style="font-weight: bold;">Номери та ціни</span></p>
@@ -114,31 +120,31 @@
                                     <li>Honey Moon Suite</li>
                                 </ul>
                             </div>
-                            <a href="#" class="innerDetH">Детальніше ></a>
+                            <a href="{{url('/page=rooms')}}" class="innerDetH">Детальніше ></a>
                         </div>
                     </div>
                     <div class="hotelBlock">
                         <div class="innerBlockH">
                             <div class="innerPictH">
-                                <img src="{{asset('../resources/img/imgAb2.jpg')}}" alt="About image" class="innerImgH">
+                                <img src="{{asset('public/img/imgAb2.jpg')}}" alt="About image" class="innerImgH">
                             </div>
                             <div class="innerTextH">
                                 <p><span style="font-weight: bold;">Розваги</span></p>
                                 <p>Для того, щоб ваш відпочинок був цікавим та нaсиченим подіями, готель DOPKA-resort пропонує вам курси танців, концерти відомих танцювальних груп, вечори живої музики, нічні вечірки біля басейну, акробатичні шоу, вечірки на пляжі та безкоштовний курс коктейлів</p>
                             </div>
-                            <a href="#" class="innerDetH">Детальніше ></a>
+                            <a href="{{url('/page=entertainment')}}" class="innerDetH">Детальніше ></a>
                         </div>
                     </div>
                     <div class="hotelBlock">
                         <div class="innerBlockH">
                             <div class="innerPictH">
-                                <img src="{{asset('../resources/img/imgAb3.jpg')}}" alt="About image" class="innerImgH">
+                                <img src="{{asset('public/img/imgAb3.jpg')}}" alt="About image" class="innerImgH">
                             </div>
                             <div class="innerTextH">
                                 <p><span style="font-weight: bold;">Спа-центр</span></p>
                                 <p>Відпочити від яскравих вражень та потурбуватись про себе ви можете у спа-центрі нашого готелю. Вам будуть запропоновані такі послуги, як критий басейн, фітнес-зала, турецька лазня, сауна, парова кімната, масажі, послуги в хамамі та інші процедури догляду за шкірою і тілом</p>
                             </div>
-                            <a href="#" class="innerDetH">Детальніше ></a>
+                            <a href="{{url('/page=spa')}}" class="innerDetH">Детальніше ></a>
 
                         </div>
                     </div>
@@ -158,7 +164,7 @@
                     <div class="socialBlock">
                         <div class="innerBlockS">
                             <div class="innerPictS">
-                                <a href="index.html"><img src="{{asset('../resources/img/inst.svg')}}" alt="Social image" class="innerImgS"></a>
+                                <a href="#"><img src="{{asset('public/img/inst.svg')}}" alt="Social image" class="innerImgS"></a>
                             </div>
                             <div class="innerTextS">
                                 <p>Найбільш свіжі фотографії високої якості ви можете знайти на нашій сторінці в Instagram</p>
@@ -168,7 +174,7 @@
                     <div class="socialBlock">
                         <div class="innerBlockS">
                             <div class="innerPictS">
-                                <a href="index.html"><img src="{{asset('../resources/img/yt.svg')}}" alt="Social image" class="innerImgS"></a>
+                                <a href="#"><img src="{{asset('public/img/yt.svg')}}" alt="Social image" class="innerImgS"></a>
                             </div>
                             <div class="innerTextS">
                                 <p>На YouTube-каналі ви можете слідкувати за нашими новими відео</p>
@@ -178,7 +184,7 @@
                     <div class="socialBlock">
                         <div class="innerBlockS">
                             <div class="innerPictS">
-                                <a href="index.html"><img src="{{asset('../resources/img/tg.svg')}}" alt="Social image" class="innerImgS"></a>
+                                <a href="#"><img src="{{asset('public/img/tg.svg')}}" alt="Social image" class="innerImgS"></a>
                             </div>
                             <div class="innerTextS">
                                 <p>Залиште відгук про ваш відпочинок у готелі на нашому Telegram-каналі</p>
@@ -188,7 +194,7 @@
                     <div class="socialBlock">
                         <div class="innerBlockS">
                             <div class="innerPictS">
-                                <a href="index.html"><img src="{{asset('../resources/img/fb.svg')}}" alt="Social image" class="innerImgS"></a>
+                                <a href="#"><img src="{{asset('public/img/fb.svg')}}" alt="Social image" class="innerImgS"></a>
                             </div>
                             <div class="innerTextS">
                                 <p>Натисніть «мені подобається» для того, щоб стежити за всіма  новинами та промо-акціями</p>
@@ -198,7 +204,7 @@
                     <div class="socialBlock">
                         <div class="innerBlockS">
                             <div class="innerPictS">
-                                <a href="index.html"><img src="{{asset('../resources/img/twit.svg')}}" alt="Social image" class="innerImgS"></a>
+                                <a href="#"><img src="{{asset('public/img/twit.svg')}}" alt="Social image" class="innerImgS"></a>
                             </div>
                             <div class="innerTextS">
                                 <p>Не упускайте знижки, стежачи за повідомленнями в нашому мікро-блозі</p>
@@ -226,14 +232,14 @@
                                 <input type="submit" value="Надіслати" name="send">
                             </div>
                             <div class="formShells">
-                                <img src="{{asset('../resources/img/shells.png')}}" alt="Shells" class="shells">
+                                <img src="{{asset('public/img/shells.png')}}" alt="Shells" class="shells">
                             </div>
                         </div>
                     </form>
                     <div class="contactsLoc">
                         <div class="textLoc">
                             <div class="locImg">
-                                <img src="{{asset('../resources/img/placeholder.svg')}}" alt="Icon" class="locSvg">
+                                <img src="{{asset('public/img/placeholder.svg')}}" alt="Icon" class="locSvg">
                             </div>
                             <div class="locText">
                                 <p>м. Морське, наб. Морська, 12</p>
@@ -241,7 +247,7 @@
                         </div>
                         <div class="textLoc">
                             <div class="locImg">
-                                <img src="{{asset('../resources/img/phone-call.svg')}}" alt="Icon" class="locSvg">
+                                <img src="{{asset('public/img/phone-call.svg')}}" alt="Icon" class="locSvg">
                             </div>
                             <div class="locText">
                                 <p><a href="tel:+380657524265">+380 657 524 265</a></p>
@@ -249,7 +255,7 @@
                         </div>
                         <div class="textLoc">
                             <div class="locImg">
-                                <img src="{{asset('../resources/img/envelope2.svg')}}" alt="Icon" class="locSvg">
+                                <img src="{{asset('public/img/envelope2.svg')}}" alt="Icon" class="locSvg">
                             </div>
                             <div class="locText">
                                 <p>dopka_resort@gmail.com</p>
