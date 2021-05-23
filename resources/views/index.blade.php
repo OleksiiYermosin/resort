@@ -197,7 +197,7 @@
                                 <a href="#"><img src="{{asset('public/img/fb.svg')}}" alt="Social image" class="innerImgS"></a>
                             </div>
                             <div class="innerTextS">
-                                <p>Натисніть «мені подобається» для того, щоб стежити за всіма  новинами та промо-акціями</p>
+                                <p>Натисніть «like» для того, щоб стежити за всіма  новинами та промо-акціями</p>
                             </div>
                         </div>
                     </div>
@@ -207,7 +207,7 @@
                                 <a href="#"><img src="{{asset('public/img/twit.svg')}}" alt="Social image" class="innerImgS"></a>
                             </div>
                             <div class="innerTextS">
-                                <p>Не упускайте знижки, стежачи за повідомленнями в нашому мікро-блозі</p>
+                                <p>Не упускайте знижки, стежачи за постами в нашому мікро-блозі</p>
                             </div>
                         </div>
                     </div>

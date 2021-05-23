@@ -390,21 +390,22 @@ section{
 	color: #FFFFFF;
 	padding-top: 9%;
 }
-.socialBlocks{
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
-	padding-top: 5%;
-	padding-bottom: 7%;
-	width: 100%;
+.socialBlocks {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 5%;
+    padding-bottom: 7%;
+    width: 100%;
 }
-.socialBlock{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 20%;
-	height: 308px;
+.socialBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    height: 308px;
+    margin-bottom: 8%;
 }
 
 .innerBlockS{
@@ -441,14 +442,7 @@ section{
 	width: 95%;
 	height: 420px;
 }
-.innerTextS p{
-	padding-top: 10%;
-	font-weight: 400;
-	font-size: 18px;
-	line-height: 22px;
-	text-align: center;
-	color: #FFFFFF;
-}
+
 .contacts{
 	background: url('../img/contBG.jpg') no-repeat center top / cover;
 	display: flex;
@@ -728,7 +722,7 @@ h4 {
 	width: 33.3%;
 	padding-bottom: 3%;
 }
-.roomsBlock:nth-child(1){
+/*.roomsBlock:nth-child(1){
 	align-items: flex-start;
 }
 .roomsBlock:nth-child(4){
@@ -739,7 +733,7 @@ h4 {
 }
 .roomsBlock:nth-child(6){
 	align-items: flex-end;
-}
+}*/
 .innerBlockR{
 	display: flex;
 	flex-direction: column;
@@ -1354,6 +1348,20 @@ select {
 	justify-content: center;
 }
 
+.innerTextS{
+    display: flex;
+    width: 100%;
+}
+.innerTextS p {
+    width: 95%;
+    padding-top: 10%;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
 @media screen and (max-width: 1200px) {
 	.container {
 		max-width: 1140px;
@@ -1684,14 +1692,14 @@ select {
 		text-transform: uppercase;
 		padding-bottom: 0.1%;
 	}
-	h2{
-		font-style: normal;
-		font-weight: bold;
-		font-size: 23px;
-		line-height: 25px;
-		padding-bottom: 2%;
-
-	}
+    h2 {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 23px;
+        line-height: 25px;
+        padding-bottom: 4%;
+        padding-top: 8%;
+    }
 	h3{
 		font-style: normal;
 		font-weight: 300;
@@ -1782,10 +1790,10 @@ select {
 	/*
 	container
 	*/
-	.roomsBlock{
-		width: 100%;
-		padding-bottom: 4%;
-	}
+    .roomsBlock {
+        width: 100%;
+        padding-bottom: 7%;
+    }
 	.innerPictR {
 		display: flex;
 		width: 100%;
@@ -1859,4 +1867,10 @@ select {
 	section {
 		padding-bottom: 5%;
 	}
+
+    .innerImgH {
+        display: flex;
+        width: 100%;
+        height: 180px;
+    }
 }
