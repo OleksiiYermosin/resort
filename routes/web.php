@@ -21,3 +21,6 @@ Route::post('/markSingleMessage', 'AdminController@markSingleMessage')->middlewa
 
 Auth::routes();
 
+Route::get('{any?}', function ($any) {
+    return redirect('/');
+})->where('any', '.*');
