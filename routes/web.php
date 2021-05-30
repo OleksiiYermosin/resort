@@ -19,7 +19,7 @@ Route::get('/adminpanel', 'AdminController@uploadAdminPage')->middleware('auth')
 Route::post('/markMessage', 'AdminController@markMessages')->middleware('auth');
 Route::post('/markSingleMessage', 'AdminController@markSingleMessage')->middleware('auth');
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
 Route::get('{any?}', function ($any) {
     return redirect('/');
