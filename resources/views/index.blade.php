@@ -225,9 +225,9 @@
                 <div class="contactsBlocks">
                     <form class="contactsForm" method="post" action="{{url("/sendMessage")}}">
                         <div class="formFields">
-                            <input type="text" placeholder="Введіть ім'я" class="enter" name="name">
-                            <input type="email" placeholder="Введіть email" class="enter" name="email">
-                            <textarea placeholder="Введіть повідомлення" rows="5" class="textArea" name="text"></textarea>
+                            <input type="text" placeholder="Введіть ім'я" pattern="\D+\s{1}\D+\s{1}\D+$" class="enter" name="name" id="nameSurname" required>
+                            <input type="email" placeholder="Введіть email" class="enter" name="email" id="email" required>
+                            <textarea placeholder="Введіть повідомлення" rows="5" class="textArea" name="text" required></textarea>
                             <div class="buttonEnter">
                                 <input type="submit" value="Надіслати" name="send">
                             </div>
