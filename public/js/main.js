@@ -14,10 +14,12 @@ document.addEventListener('DOMContentLoaded', function(){
     }
     var checkInDate = document.getElementById('start');
     var checkOutDate = document.getElementById('end');
-    checkInDate.value = year + "-" + month + "-" + day;
-    checkInDate.min = year + "-" + month + "-" + day;
-    checkOutDate.value = year + "-" + month + "-" + day;
-    checkOutDate.min = year + "-" + month + "-" + day;
+    if (checkInDate != null && checkOutDate != null) {
+        checkInDate.value = year + "-" + month + "-" + day;
+        checkInDate.min = year + "-" + month + "-" + day;
+        checkOutDate.value = year + "-" + month + "-" + day;
+        checkOutDate.min = year + "-" + month + "-" + day;
+    }
 });
 
 function changeCheckOutDate(){
@@ -58,4 +60,38 @@ function hideRead(){
             parent[i].hidden = true;
         }
     }
+}
+
+
+var phone = document.getElementById("phoneId");
+if (phone != null) {
+    phone.addEventListener("input", function (event) {
+  if (phone.validity.patternMismatch) {
+    phone.setCustomValidity("Будь ласка, введіть дані в форматі '+380123456789' ");
+  } else {
+    phone.setCustomValidity("");
+  }
+});
+}
+
+var nameSurname = document.getElementById("nameSurname");
+if (nameSurname != null) {
+nameSurname.addEventListener("input", function (event) {
+  if (nameSurname.validity.patternMismatch) {
+    nameSurname.setCustomValidity("Будь ласка, введіть дані в форматі 'Єрмосін Олексій Олександрович' ");
+  } else {
+    nameSurname.setCustomValidity("");
+  }
+});
+}
+
+var email = document.getElementById("email");
+if (email != null) {
+email.addEventListener("input", function (event) {
+  if (email.validity.typeMismatch) {
+    email.setCustomValidity("Будь ласка, введіть дані в форматі 'email@gmail.com' ");
+  } else {
+    email.setCustomValidity("");
+  }
+});
 }
