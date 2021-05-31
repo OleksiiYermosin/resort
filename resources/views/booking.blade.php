@@ -101,11 +101,11 @@
                             </div>
                             <div>
                                 <label for="start">&nbsp;</label>
-                                <input type="tel" pattern="^\+\d{1,2}\d{3}\d{7}$" maxlength="13" placeholder="Номер телефону (+380*********)" name="phone">
+                                <input type="tel" pattern="^\+\d{1,2}\d{3}\d{7}$" maxlength="13" placeholder="Номер телефону (+380123456789)" name="phone" id="phoneId" required>
                             </div>
                             <div>
                                 <label for="start">&nbsp;</label>
-                                <input type="text" pattern="\D+\s{1}\D+\s{1}\D+$" maxlength="30" placeholder="ПІБ замовника" id="nameSurname" name="nameSurname">
+                                <input type="text" pattern="\D+\s{1}\D+\s{1}\D+$" maxlength="30" placeholder="ПІБ (Іванов Іван Іванович)" id="nameSurname" name="nameSurname" required>
                             </div>
                         </div>
 
