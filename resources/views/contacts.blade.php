@@ -87,5 +87,13 @@
             </div>
         </div>
     </section>
+
+    <div class="map" style="height: 400px;">
+        <div style="overflow:hidden;width:100%;position: relative;">
+            <iframe width="100%" height="400"
+            src="https://maps.google.com/maps?width=700&amp;height=400&amp;hl=en&amp;q=50%2C12%20Eyl%C3%BCl%20Cd.%2C%20Mudanya%2C%20Turkey+(DopkaResort)&amp;ie=UTF8&amp;t=&amp;z=16&amp;iwloc=B&amp;output=embed"
+            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+        </div>
+    </div>
 </div>
 @endsection
