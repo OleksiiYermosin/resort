@@ -64,8 +64,8 @@
                 <div class="adminBlocks">
                     <form class="adminForm" method="post" action="{{url("/checkRooms")}}">
                         <div class="formFieldsA">
-                            <input type="text" pattern="\D+\s{1}\D+\s{1}\D+$" maxlength="30" placeholder="Введіть ПІБ" class="enter" name="name">
-                            <input type="tel" pattern="^\+\d{1,2}\d{3}\d{7}$" maxlength="13" placeholder="Введіть номер телефону" class="enter" name="phone">
+                            <input type="text" pattern="\D+\s{1}\D+\s{1}\D+$" maxlength="30" placeholder="Введіть ПІБ" class="enter" name="name" id="nameSurname" required>
+                            <input type="tel" pattern="^\+\d{1,2}\d{3}\d{7}$" maxlength="13" placeholder="Введіть номер телефону" class="enter" name="phone" id="phoneId" required>
                             <div class="buttonLogin">
                                 <input type="submit" value="Перевірити" name="send">
                             </div>
