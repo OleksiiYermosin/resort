@@ -1067,7 +1067,8 @@ select {
 .admin{
     display: flex;
     margin: 0px;
-    padding-bottom: 7.5%
+    padding-bottom: 7.5%;
+    min-height: 400px;
 }
 
 .adminInfo{
